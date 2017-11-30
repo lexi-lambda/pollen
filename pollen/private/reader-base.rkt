@@ -44,9 +44,9 @@
                   [META-MOD (setup:meta-export)]
                   [PARSER-MODE-FROM-READER parser-mode-from-reader]
                   [POLLEN-MODULE-SYNTAX (let ([mod-stx #'(module POLLEN-MOD-NAME pollen
+                                                           (provide (all-defined-out))
+                                                           DIRECTORY-REQUIRES
                                                            (define-meta HERE-KEY HERE-PATH) 
-                                                           #;(provide (all-defined-out))
-                                                           #;DIRECTORY-REQUIRES
                                                            . SOURCE-LINES)])
                                           (syntax-property mod-stx 'parser-mode-from-reader parser-mode-from-reader))])
      #'(module runtime-wrapper racket/base
